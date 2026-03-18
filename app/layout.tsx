@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function RootLayout({
           <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 className="text-2xl font-bold text-indigo-600">CodeCraft AI</h1>
             <div className="space-x-4">
-              <a href="/" className="text-gray-700 hover:text-indigo-600">Gallery</a>
-              <a href="/admin" className="text-gray-700 hover:text-indigo-600">Admin</a>
+              <Link href="/" className="text-gray-700 hover:text-indigo-600">Gallery</Link>
+              <Link href="/admin" className="text-gray-700 hover:text-indigo-600">Admin</Link>
             </div>
           </nav>
         </header>
