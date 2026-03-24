@@ -1,11 +1,11 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "installCommand": "npm install --legacy-peer-deps",
   "env": {
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@next_public_stripe_publishable_key",
-    "STRIPE_SECRET_KEY": "@stripe_secret_key",
-    "NEXT_PUBLIC_APP_URL": "@next_public_app_url",
-    "ADMIN_PASSWORD": "@admin_password"
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "pk_live_51TEU5r98SFBedaoayEIPjxq1T0UYcXU6wDPaJ1u2uaktmWyoTXEDpRW3lGPdP9frgwMQnlwMsozGev8iSEGo793600IKW9PpRL",
+    "STRIPE_SECRET_KEY": "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",
+    "STRIPE_WEBHOOK_SECRET": "whsec_9aNc9hTjbDZ6hiFle7RrMZm0e4l9zCDY",
+    "NEXT_PUBLIC_APP_URL": "https://code-craft-ai.vercel.app",
+    "ADMIN_PASSWORD": "admin123"
   }
 }
