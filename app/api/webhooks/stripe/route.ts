@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { createOrder, updateOrderWithDownloadUrl } from '@/lib/dynamodb'
-import { sendDeliveryEmail, sendOrderConfirmationEmail } from '@/lib/sendgrid'
+import { createOrder, updateOrderWithDownloadUrl } from '@/lib/orders-local'
+import { sendOrderConfirmationEmail } from '@/lib/ses'
 import { generateDownloadLink, getDownloadLinkExpiry } from '@/lib/s3'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
@@ -63,13 +63,6 @@ export async function POST(request: NextRequest) {
           createdAt: new Date().toISOString(),
         })
 
-        // Send confirmation email
-        await sendOrderConfirmationEmail({
-          email,
-          templateName,
-          orderId,
-        })
-
         // Generate download link
         const downloadUrl = await generateDownloadLink(templateId)
         const expiresAt = getDownloadLinkExpiry()
@@ -77,12 +70,14 @@ export async function POST(request: NextRequest) {
         // Update order with download URL
         await updateOrderWithDownloadUrl(orderId, downloadUrl, expiresAt)
 
-        // Send delivery email with download link
-        await sendDeliveryEmail({
-          email,
+        // Send order confirmation email with download link via AWS SES
+        const templatePrice = session.amount_total ? Math.round(session.amount_total / 100) : 0
+        await sendOrderConfirmationEmail({
+          to: email,
           templateName,
+          templatePrice,
           downloadUrl,
-          expiresIn: '24 hours',
+          orderId,
         })
 
         console.log(`Order completed and delivered: ${orderId}`)
