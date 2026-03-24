@@ -1,0 +1,95 @@
+{
+  "orders": [
+    {
+      "orderId": "test_order_2026-03-24",
+      "email": "test@example.com",
+      "templateId": "01-react-typescript-dashboard",
+      "templateName": "React TypeScript Dashboard",
+      "amount": 29.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:40:09.235006"
+    },
+    {
+      "orderId": "test_order_2026-03-24T104038",
+      "email": "e2e-test@example.com",
+      "templateId": "01-react-typescript-dashboard",
+      "templateName": "React TypeScript Dashboard",
+      "amount": 29.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:40:39.055524"
+    },
+    {
+      "orderId": "order_2026-03-24_001",
+      "email": "customer1@example.com",
+      "templateId": "02-next-ecommerce",
+      "templateName": "Next.js E-Commerce Store",
+      "amount": 49.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T08:15:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_002",
+      "email": "customer2@example.com",
+      "templateId": "01-react-typescript-dashboard",
+      "templateName": "React TypeScript Dashboard",
+      "amount": 29.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T09:30:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_003",
+      "email": "customer3@example.com",
+      "templateId": "03-tailwind-ui-kit",
+      "templateName": "Tailwind UI Kit",
+      "amount": 39.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T09:45:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_004",
+      "email": "customer4@example.com",
+      "templateId": "02-next-ecommerce",
+      "templateName": "Next.js E-Commerce Store",
+      "amount": 49.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:00:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_005",
+      "email": "customer5@example.com",
+      "templateId": "01-react-typescript-dashboard",
+      "templateName": "React TypeScript Dashboard",
+      "amount": 29.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:15:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_006",
+      "email": "customer6@example.com",
+      "templateId": "03-tailwind-ui-kit",
+      "templateName": "Tailwind UI Kit",
+      "amount": 39.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:25:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_007",
+      "email": "customer7@example.com",
+      "templateId": "02-next-ecommerce",
+      "templateName": "Next.js E-Commerce Store",
+      "amount": 49.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:35:00.000000"
+    },
+    {
+      "orderId": "order_2026-03-24_008",
+      "email": "customer8@example.com",
+      "templateId": "01-react-typescript-dashboard",
+      "templateName": "React TypeScript Dashboard",
+      "amount": 29.99,
+      "status": "completed",
+      "createdAt": "2026-03-24T10:42:00.000000"
+    }
+  ],
+  "lastUpdated": "2026-03-24T10:48:00.000000"
+}
