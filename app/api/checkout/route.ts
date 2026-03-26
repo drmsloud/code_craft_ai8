@@ -9,6 +9,18 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { templateId, templateName, amount, email } = body
     
+    // Verify Stripe key is loaded - critical check
+    if (!process.env.STRIPE_SECRET_KEY) {
+      console.error('CRITICAL: STRIPE_SECRET_KEY environment variable is missing!')
+      return NextResponse.json(
+        { 
+          error: 'Configuration error: Stripe key not available',
+          message: 'The application is not properly configured with Stripe credentials'
+        },
+        { status: 500 }
+      )
+    }
+    
     console.log('Checkout request:', { templateId, templateName, amount, email })
     console.log('Stripe key loaded:', !!process.env.STRIPE_SECRET_KEY)
 
