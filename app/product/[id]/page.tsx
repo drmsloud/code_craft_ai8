@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { useState } from 'react'
 import StripeCheckout from '@/components/StripeCheckout'
+import EmailOptIn from '@/components/EmailOptIn'
 
 export default function ProductPage() {
   const params = useParams()
@@ -87,6 +88,11 @@ export default function ProductPage() {
 
           {/* Checkout */}
           {showCheckout && <StripeCheckout template={template} />}
+
+          {/* Email Opt-In */}
+          <div className="mt-8">
+            <EmailOptIn />
+          </div>
 
           {/* Info */}
           <div className="border-t border-gray-200 pt-6 text-sm text-gray-600">

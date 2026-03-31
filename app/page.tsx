@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { templates } from '@/lib/templates'
+import EmailOptIn from '@/components/EmailOptIn'
 
 export default function Home() {
   return (
@@ -43,6 +44,13 @@ export default function Home() {
               <p className="text-gray-600">Source code included. Modify and use in your projects.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Email Opt-In */}
+      <section className="py-16 bg-white">
+        <div className="max-w-md mx-auto px-6">
+          <EmailOptIn />
         </div>
       </section>
 
